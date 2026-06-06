@@ -1297,5 +1297,294 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 </div><!-- /main-content -->
+  <style>
+  /* ===== MODO OSCURO GENERAL ===== */
+  html, body {
+    background: #07131f !important;
+    color: #eaf6ff !important;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(0, 188, 212, 0.18), transparent 32%),
+      radial-gradient(circle at bottom right, rgba(255, 152, 0, 0.10), transparent 28%),
+      #07131f !important;
+  }
+
+  .page, .container, main, section {
+    background: transparent !important;
+  }
+
+  .sec, .card, .box, .formula-card, details, .tipo-ejercicio {
+    background: #102235 !important;
+    border: 1px solid rgba(116, 220, 230, 0.35) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.28) !important;
+    color: #eaf6ff !important;
+  }
+
+  h1, h2, h3, h4, .title {
+    color: #bffcff !important;
+  }
+
+  .fml, .formula, .formula-box, code {
+    background: #071827 !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(125, 232, 255, 0.30) !important;
+  }
+
+  details {
+    margin-top: 8px;
+    border-radius: 12px;
+    padding: 8px 12px;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #8eeeff !important;
+  }
+
+  a {
+    color: #7de8ff !important;
+  }
+
+  .tipos-parcial {
+    margin-top: 36px;
+    padding: 24px;
+    border-radius: 18px;
+    background: #0b1b2b !important;
+    border: 1px solid rgba(125, 232, 255, 0.35);
+  }
+
+  .tipos-parcial h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #bffcff !important;
+  }
+
+  .tipos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 16px;
+  }
+
+  .tipo-ejercicio {
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .tipo-ejercicio h3 {
+    margin-top: 0;
+    color: #ffcf7a !important;
+    font-size: 1.05rem;
+  }
+
+  .tipo-ejercicio .fml {
+    display: block;
+    margin: 7px 0;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 0.98rem;
+  }
+
+  .tipo-ejercicio p,
+  .tipo-ejercicio li {
+    line-height: 1.45;
+  }
+</style>
+
+<section id="tipos-parcial" class="tipos-parcial">
+  <h2>TIPOS DE EJERCICIO DE PARCIAL</h2>
+
+  <div class="tipos-grid">
+
+    <div class="tipo-ejercicio">
+      <h3>CHOQUE ANGULAR CON PIVOTE</h3>
+
+      <div class="fml">\( L_i = L_f \)</div>
+      <div class="fml">\( L = dmv \)</div>
+      <div class="fml">\( L = I\omega \)</div>
+      <div class="fml">\( I_{\text{total}} = I_{\text{cuerpo}} + md^2 \)</div>
+      <div class="fml">\( \Delta K = K_f - K_i \)</div>
+
+      <details>
+        <summary>Cómo se arranca</summary>
+        <p>Elegís como punto de referencia el pivote. Durante el choque, la fuerza del pivote puede ser grande, pero no hace torque respecto del pivote porque su brazo es cero. Por eso se conserva el momento angular respecto de ese punto.</p>
+        <p>Antes del choque suele haber una partícula con velocidad \(v\), entonces su momento angular es \(dmv\). Después del choque suele quedar un cuerpo girando, entonces aparece \(I\omega\).</p>
+      </details>
+
+      <details>
+        <summary>Trampas</summary>
+        <p>No conserves energía cinética si el choque es inelástico. Si la bala se clava, el bloque queda pegado o dos discos terminan girando juntos, la energía cinética generalmente no se conserva.</p>
+      </details>
+    </div>
+
+    <div class="tipo-ejercicio">
+      <h3>RODADURA SIN DESLIZAR</h3>
+
+      <div class="fml">\( v_{CM} = R\omega \)</div>
+      <div class="fml">\( a_{CM} = R\alpha \)</div>
+      <div class="fml">\( K = \frac{1}{2}Mv_{CM}^2 + \frac{1}{2}I_{CM}\omega^2 \)</div>
+      <div class="fml">\( \sum F = Ma_{CM} \)</div>
+      <div class="fml">\( \sum \tau_{CM} = I_{CM}\alpha \)</div>
+
+      <details>
+        <summary>Cómo se arranca</summary>
+        <p>Hacés diagrama de cuerpo libre. Para el movimiento del centro de masa usás \( \sum F = Ma_{CM} \). Para la rotación usás \( \sum \tau_{CM} = I_{CM}\alpha \). Cerrás el sistema con \( a_{CM}=R\alpha \).</p>
+      </details>
+
+      <details>
+        <summary>Trampas</summary>
+        <p>El rozamiento en rodadura pura es estático, no dinámico. No siempre disipa energía. Además, \(a_{CM}=R\alpha\) vale para el centro de masa, no para cualquier cuerda o punto del cuerpo.</p>
+      </details>
+    </div>
+
+    <div class="tipo-ejercicio">
+      <h3>CILINDRO CON HILO ARRIBA / CARRETE</h3>
+
+      <div class="fml">\( a_{CM} = R\alpha \)</div>
+      <div class="fml">\( a_{\text{bloque}} = 2R\alpha \)</div>
+      <div class="fml">\( a_{\text{cuerda}} = \alpha(R \pm r) \)</div>
+      <div class="fml">\( \sum \tau = I\alpha \)</div>
+
+      <details>
+        <summary>Cómo se arranca</summary>
+        <p>Si el hilo sale por arriba de un cilindro que rueda, la cuerda se mueve como el punto superior. Ese punto combina traslación del centro de masa más rotación, por eso aparece \(2R\alpha\).</p>
+        <p>En un carrete, el cuerpo rueda sobre el radio grande \(R\), pero la cuerda sale del radio chico \(r\). Por eso se suman o restan aportes: \(R\alpha\) y \(r\alpha\).</p>
+      </details>
+
+      <details>
+        <summary>Trampas</summary>
+        <p>No memorices el signo de \(R \pm r\) sin mirar el dibujo. Si la traslación y la rotación de la cuerda van en el mismo sentido, se suman. Si van en sentidos opuestos, se restan.</p>
+      </details>
+    </div>
+
+    <div class="tipo-ejercicio">
+      <h3>POLEAS, TAMBORES Y CUERDAS</h3>
+
+      <div class="fml">\( a = R\alpha \)</div>
+      <div class="fml">\( \sum \tau = I\alpha \)</div>
+      <div class="fml">\( (T_2 - T_1)R = I\alpha \)</div>
+      <div class="fml">\( K_{\text{rot}} = \frac{1}{2}I\omega^2 \)</div>
+
+      <details>
+        <summary>Cómo se arranca</summary>
+        <p>Para cada masa que se traslada, planteás \( \sum F = ma \). Para cada polea o tambor con inercia, planteás \( \sum \tau = I\alpha \). La cuerda conecta todo con \(a=R\alpha\), si no desliza.</p>
+      </details>
+
+      <details>
+        <summary>Trampas</summary>
+        <p>Si la polea tiene masa o momento de inercia, las tensiones de los dos lados no tienen por qué ser iguales. Solo en una polea ideal sin masa suele tomarse la misma tensión.</p>
+      </details>
+    </div>
+
+    <div class="tipo-ejercicio">
+      <h3>EQUILIBRIO DE VIGAS, BARRAS Y ESCALERAS</h3>
+
+      <div class="fml">\( \sum F_x = 0 \)</div>
+      <div class="fml">\( \sum F_y = 0 \)</div>
+      <div class="fml">\( \sum \tau = 0 \)</div>
+      <div class="fml">\( \tau = dF \)</div>
+      <div class="fml">\( f_e \leq \mu_e N \)</div>
+      <div class="fml">\( f_e = \mu_e N \quad \text{en el límite} \)</div>
+
+      <details>
+        <summary>Cómo se arranca</summary>
+        <p>Dibujás todas las fuerzas: peso, normales, tensiones, rozamiento y reacciones. Después elegís un punto para tomar momentos. Conviene elegir el punto donde pasan más incógnitas, por ejemplo un pivote o apoyo.</p>
+      </details>
+
+      <details>
+        <summary>Trampas</summary>
+        <p>Si preguntan ángulo mínimo, distancia máxima o condición antes de deslizar, probablemente estás en el límite de rozamiento: \(f_e=\mu_eN\).</p>
+      </details>
+    </div>
+
+    <div class="tipo-ejercicio">
+      <h3>OSCILACIONES CON RESORTE</h3>
+
+      <div class="fml">\( x'' + \Omega^2x = 0 \)</div>
+      <div class="fml">\( \Omega = \sqrt{\frac{k}{m}} \)</div>
+      <div class="fml">\( T = 2\pi\sqrt{\frac{m}{k}} \)</div>
+      <div class="fml">\( x(t)=A\cos(\Omega t+\varphi) \)</div>
+      <div class="fml">\( v(t)=-\Omega A\sen(\Omega t+\varphi) \)</div>
+      <div class="fml">\( A=\sqrt{x_0^2+\left(\frac{v_0}{\Omega}\right)^2} \)</div>
+
+      <details>
+        <summary>Cómo se arranca</summary>
+        <p>Primero ubicás la posición de equilibrio. Después medís \(x\) desde ese equilibrio. Así la ecuación queda limpia: \(x''+\Omega^2x=0\).</p>
+      </details>
+
+      <details>
+        <summary>Trampas</summary>
+        <p>En resortes verticales, si el origen está en equilibrio, no vuelvas a meter \(mg\) en la ecuación. La gravedad ya quedó usada para determinar el equilibrio.</p>
+      </details>
+    </div>
+
+    <div class="tipo-ejercicio">
+      <h3>PÉNDULO SIMPLE Y PÉNDULO FÍSICO</h3>
+
+      <div class="fml">\( T_{\text{simple}} = 2\pi\sqrt{\frac{L}{g}} \)</div>
+      <div class="fml">\( I_P\theta'' = -Mgd\theta \)</div>
+      <div class="fml">\( \Omega = \sqrt{\frac{Mgd}{I_P}} \)</div>
+      <div class="fml">\( T_{\text{físico}} = 2\pi\sqrt{\frac{I_P}{Mgd}} \)</div>
+      <div class="fml">\( I_P = I_{CM}+Md^2 \)</div>
+      <div class="fml">\( d_{\min}=\sqrt{\frac{I_{CM}}{M}} \)</div>
+
+      <details>
+        <summary>Cómo se arranca</summary>
+        <p>Si es una masa puntual con hilo, es péndulo simple. Si es un cuerpo rígido con tamaño, masa distribuida y pivote, es péndulo físico. En péndulo físico siempre necesitás \(I_P\) y la distancia \(d\) del pivote al centro de masa.</p>
+      </details>
+
+      <details>
+        <summary>Trampas</summary>
+        <p>Los ángulos deben estar en radianes cuando usás aproximación de ángulo pequeño. No uses \(T=2\pi\sqrt{L/g}\) para un disco, varilla o cuerpo extenso.</p>
+      </details>
+    </div>
+
+    <div class="tipo-ejercicio">
+      <h3>PRESIÓN, EMPUJE Y FLOTACIÓN</h3>
+
+      <div class="fml">\( p = p_0+\rho gh \)</div>
+      <div class="fml">\( p_{\text{man}} = \rho gh \)</div>
+      <div class="fml">\( E = \rho_{\text{fluido}}gV_{\text{sumergido}} \)</div>
+      <div class="fml">\( E_{\text{total}}=\rho_1gV_1+\rho_2gV_2 \)</div>
+      <div class="fml">\( E=P \quad \text{si flota} \)</div>
+      <div class="fml">\( T=P-E \)</div>
+
+      <details>
+        <summary>Cómo se arranca</summary>
+        <p>Si el fluido está quieto, usás hidrostática. Para presión, bajás desde la superficie sumando \( \rho gh \). Para empuje, calculás el peso del fluido desplazado.</p>
+      </details>
+
+      <details>
+        <summary>Trampas</summary>
+        <p>La presión depende de la densidad del fluido, no de la densidad del objeto. El empuje usa volumen sumergido, no siempre volumen total.</p>
+      </details>
+    </div>
+
+    <div class="tipo-ejercicio">
+      <h3>BERNOULLI, VENTURI, PITOT Y TANQUES</h3>
+
+      <div class="fml">\( Q = Av \)</div>
+      <div class="fml">\( A_1v_1=A_2v_2 \)</div>
+      <div class="fml">\( p+\rho gy+\frac{1}{2}\rho v^2=\text{cte} \)</div>
+      <div class="fml">\( p_1-p_2=\frac{1}{2}\rho(v_2^2-v_1^2) \)</div>
+      <div class="fml">\( \Delta p=(\rho_m-\rho_f)gh \)</div>
+      <div class="fml">\( v_{\text{Pitot}}=\sqrt{2gh} \)</div>
+      <div class="fml">\( v_{\text{Torricelli}}=\sqrt{2gh} \)</div>
+
+      <details>
+        <summary>Cómo se arranca</summary>
+        <p>Si hay fluido en movimiento, casi siempre empezás con continuidad y Bernoulli. En tuberías horizontales se cancela el término de altura. Si hay manómetro, convertís altura en diferencia de presión.</p>
+      </details>
+
+      <details>
+        <summary>Trampas</summary>
+        <p>En manómetros con mercurio y agua, muchas veces va \( \rho_m-\rho_f \), no solo \( \rho_m \). Si el tanque es grande, podés tomar \(v_{\text{superficie}}\approx 0\).</p>
+      </details>
+    </div>
+
+  </div>
+</section>
 </body>
 </html>
