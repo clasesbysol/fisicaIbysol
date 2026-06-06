@@ -1746,5 +1746,159 @@ code:not(#tipos-parcial code):not(.tipos-parcial code) {
   border: 1px solid #d5dde5 !important;
 }
 </style>
+  <style>
+/* ===== OSCURO LIMPIO: FONDO OSCURO + TARJETAS OSCURAS CLARAS + FÓRMULAS BLANCAS ===== */
+
+/* FONDO GENERAL */
+html, body {
+  background: #03070d !important;
+  color: #eef7ff !important;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(0, 150, 200, 0.16), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(255, 170, 70, 0.08), transparent 30%),
+    linear-gradient(180deg, #03070d 0%, #07111d 55%, #03070d 100%) !important;
+}
+
+/* CONTENEDORES GENERALES */
+.page,
+.container,
+main,
+.wrapper {
+  background: transparent !important;
+}
+
+/* TARJETAS GENERALES, PERO NO LAS DE TIPOS DE EJERCICIO */
+.sec,
+.card,
+.box,
+.formula-card {
+  background: #16283a !important;
+  color: #eef7ff !important;
+  border: 1px solid rgba(160, 230, 245, 0.35) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* TÍTULOS */
+h1, h2, h3, h4,
+.title,
+.sec-title,
+.lbl {
+  color: #d9fbff !important;
+}
+
+/* FÓRMULAS EN BLANCO, TEXTO NEGRO */
+.fml,
+.formula,
+.formula-box {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #d0d7de !important;
+  border-radius: 10px !important;
+  padding: 8px 10px !important;
+  margin: 7px 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20) !important;
+}
+
+/* MATHJAX NEGRO DENTRO DE LAS FÓRMULAS */
+.fml mjx-container,
+.formula mjx-container,
+.formula-box mjx-container {
+  color: #000000 !important;
+}
+
+/* DESPLEGABLES CERRADOS */
+details {
+  background: #20364d !important;
+  color: #eef7ff !important;
+  border: 1px solid rgba(170, 235, 250, 0.32) !important;
+  border-radius: 12px !important;
+  padding: 8px 12px !important;
+  margin-top: 9px !important;
+}
+
+/* TÍTULO DEL DESPLEGABLE */
+summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #a8f3ff !important;
+}
+
+/* DESPLEGABLE ABIERTO: TEXTO EN BLANCO Y NEGRO */
+details[open] {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #d0d7de !important;
+}
+
+/* SUMMARY CUANDO ESTÁ ABIERTO */
+details[open] summary {
+  color: #00536b !important;
+  border-bottom: 1px solid #d8e0e7;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+/* TEXTO DENTRO DEL DESPLEGABLE ABIERTO */
+details[open] p,
+details[open] li,
+details[open] div,
+details[open] span {
+  color: #000000 !important;
+}
+
+/* FÓRMULAS DENTRO DEL DESPLEGABLE ABIERTO */
+details[open] .fml,
+details[open] .formula,
+details[open] .formula-box {
+  background: #f8fafc !important;
+  color: #000000 !important;
+  border: 1px solid #cfd8df !important;
+}
+
+/* BOTONES SUPERIORES */
+.nav-btn,
+.top-btn,
+.btn,
+button {
+  background: #18344d !important;
+  color: #eefaff !important;
+  border: 1px solid rgba(170, 235, 250, 0.45) !important;
+  border-radius: 999px !important;
+}
+
+.nav-btn:hover,
+.top-btn:hover,
+.btn:hover,
+button:hover {
+  background: #25506f !important;
+}
+
+/* LINKS */
+a {
+  color: #8eefff !important;
+}
+
+/* TABLAS */
+table {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+td, th {
+  color: #000000 !important;
+  border: 1px solid #d0d7de !important;
+}
+
+/* ===== NO TOCAR LA SECCIÓN TIPOS DE EJERCICIO ===== */
+#tipos-parcial,
+#tipos-parcial *,
+.tipos-parcial,
+.tipos-parcial * {
+  all: revert-layer;
+}
+</style>
 </body>
 </html>
