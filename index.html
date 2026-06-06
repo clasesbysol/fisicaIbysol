@@ -1586,5 +1586,165 @@ html{scroll-behavior:smooth}
 
   </div>
 </section>
+  <style>
+/* ===== MODO OSCURO GENERAL, SIN TOCAR TIPOS DE EJERCICIO ===== */
+
+/* Fondo general oscuro */
+html, body {
+  background: #050b14 !important;
+  color: #f2f6fa !important;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(25, 118, 210, 0.22), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(0, 188, 212, 0.12), transparent 28%),
+    linear-gradient(180deg, #050b14 0%, #08131f 55%, #050b14 100%) !important;
+}
+
+/* Contenedores generales */
+.page,
+.container,
+main,
+section:not(#tipos-parcial) {
+  background: transparent !important;
+}
+
+/* Tarjetas principales, EXCEPTO las de tipos de ejercicio */
+.sec,
+.card,
+.box,
+.formula-card {
+  background: #111c2b !important;
+  color: #f2f6fa !important;
+  border: 1px solid rgba(130, 210, 230, 0.32) !important;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.38) !important;
+}
+
+/* No modificar tarjetas dentro de tipos de ejercicio */
+#tipos-parcial,
+#tipos-parcial *,
+.tipos-parcial,
+.tipos-parcial * {
+  /* queda como estaba */
+}
+
+/* Títulos generales */
+h1, h2, h3, h4,
+.title,
+.sec-title {
+  color: #d8f7ff !important;
+}
+
+/* Pero NO tocar títulos dentro de tipos de ejercicio */
+#tipos-parcial h1,
+#tipos-parcial h2,
+#tipos-parcial h3,
+#tipos-parcial h4,
+.tipos-parcial h1,
+.tipos-parcial h2,
+.tipos-parcial h3,
+.tipos-parcial h4 {
+  color: inherit !important;
+}
+
+/* Fórmulas generales: fondo blanco y texto negro */
+.fml:not(#tipos-parcial .fml):not(.tipos-parcial .fml),
+.formula:not(#tipos-parcial .formula):not(.tipos-parcial .formula),
+.formula-box:not(#tipos-parcial .formula-box):not(.tipos-parcial .formula-box),
+.math:not(#tipos-parcial .math):not(.tipos-parcial .math) {
+  background: #ffffff !important;
+  color: #050505 !important;
+  border: 1px solid #d5dde5 !important;
+  border-radius: 10px !important;
+  display: block;
+  padding: 8px 10px !important;
+  margin: 7px 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* MathJax negro dentro de fórmulas blancas, EXCEPTO tipos de ejercicio */
+.fml:not(#tipos-parcial .fml):not(.tipos-parcial .fml) mjx-container,
+.formula:not(#tipos-parcial .formula):not(.tipos-parcial .formula) mjx-container,
+.formula-box:not(#tipos-parcial .formula-box):not(.tipos-parcial .formula-box) mjx-container {
+  color: #050505 !important;
+}
+
+/* Desplegables generales cerrados: oscuros */
+details:not(#tipos-parcial details):not(.tipos-parcial details) {
+  background: #172638 !important;
+  color: #f2f6fa !important;
+  border: 1px solid rgba(130, 210, 230, 0.28) !important;
+  border-radius: 12px !important;
+  margin-top: 9px !important;
+  padding: 8px 12px !important;
+}
+
+/* Summary general */
+details:not(#tipos-parcial details):not(.tipos-parcial details) summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #9eefff !important;
+}
+
+/* Desplegable abierto general: fondo blanco y texto negro */
+details[open]:not(#tipos-parcial details):not(.tipos-parcial details) {
+  background: #ffffff !important;
+  color: #050505 !important;
+  border: 1px solid #d5dde5 !important;
+}
+
+/* Summary dentro de desplegable abierto */
+details[open]:not(#tipos-parcial details):not(.tipos-parcial details) summary {
+  color: #004b65 !important;
+  border-bottom: 1px solid #dbe5ea;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+/* Texto dentro de desplegables abiertos */
+details[open]:not(#tipos-parcial details):not(.tipos-parcial details) p,
+details[open]:not(#tipos-parcial details):not(.tipos-parcial details) li,
+details[open]:not(#tipos-parcial details):not(.tipos-parcial details) div {
+  color: #050505 !important;
+}
+
+/* Botones superiores */
+.nav-btn,
+.top-btn,
+button,
+.btn {
+  background: #10263a !important;
+  color: #eafaff !important;
+  border: 1px solid rgba(130, 210, 230, 0.45) !important;
+}
+
+.nav-btn:hover,
+.top-btn:hover,
+button:hover,
+.btn:hover {
+  background: #173957 !important;
+}
+
+/* Tablas generales, EXCEPTO tipos de ejercicio */
+table:not(#tipos-parcial table):not(.tipos-parcial table) {
+  background: #ffffff !important;
+  color: #050505 !important;
+  border-collapse: collapse;
+}
+
+td:not(#tipos-parcial td):not(.tipos-parcial td),
+th:not(#tipos-parcial th):not(.tipos-parcial th) {
+  color: #050505 !important;
+  border: 1px solid #cfd8df !important;
+}
+
+/* Código suelto general */
+code:not(#tipos-parcial code):not(.tipos-parcial code) {
+  background: #ffffff !important;
+  color: #050505 !important;
+  border: 1px solid #d5dde5 !important;
+}
+</style>
 </body>
 </html>
