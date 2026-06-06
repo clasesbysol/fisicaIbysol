@@ -2064,5 +2064,157 @@ a {
   color: #8eefff !important;
 }
 </style>
+  <style>
+/* ===== MODO OSCURO REAL PARA ESTE HTML ===== */
+
+/* 1) Fondo general bien oscuro */
+html,
+body {
+  background: #020814 !important;
+  color: #eef8ff !important;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(0, 180, 220, 0.10), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(120, 80, 255, 0.09), transparent 30%),
+    linear-gradient(180deg, #020814 0%, #06111f 55%, #020814 100%) !important;
+}
+
+/* 2) Ancho central transparente para que se vea el fondo */
+.main-content {
+  background: transparent !important;
+}
+
+/* 3) Tarjetas de tema: oscuras, pero con contraste contra el fondo */
+.topic-card {
+  background: #10243a !important;
+  border: 1.5px solid rgba(150, 225, 245, 0.38) !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55) !important;
+}
+
+/* 4) Cuerpo interno de cada tarjeta: oscuro también */
+.topic-body {
+  background: #10243a !important;
+  color: #eef8ff !important;
+}
+
+/* 5) Separadores */
+hr {
+  border-top: 1px solid rgba(170, 230, 250, 0.22) !important;
+}
+
+/* 6) Títulos y etiquetas internas */
+.lbl {
+  color: #9eefff !important;
+}
+
+.lbl::before {
+  background: #5ee7ff !important;
+}
+
+.note,
+.blist li,
+.steps li {
+  color: #d7ebf5 !important;
+}
+
+/* 7) Fórmulas: fondo blanco y texto negro */
+.fml {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #cfd8df !important;
+  border-radius: 9px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Variantes de fórmulas también quedan blancas */
+.fml-green,
+.fml-amber,
+.fml-red {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #cfd8df !important;
+}
+
+/* MathJax dentro de fórmulas en negro */
+.fml mjx-container {
+  color: #000000 !important;
+}
+
+/* 8) Desplegables cerrados: oscuros, distintos de la tarjeta */
+.details-box {
+  border-top: 1px solid rgba(170, 230, 250, 0.22) !important;
+}
+
+details.explain {
+  background: #183653 !important;
+  border: 1px solid rgba(160, 230, 245, 0.35) !important;
+  color: #eef8ff !important;
+}
+
+details.explain summary {
+  color: #9eefff !important;
+}
+
+details.explain summary::before {
+  background: #1f9ee7 !important;
+  color: #ffffff !important;
+}
+
+/* 9) Desplegables abiertos: fondo blanco, texto negro */
+details.explain[open] {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #cfd8df !important;
+}
+
+details.explain[open] summary {
+  color: #00536b !important;
+  border-bottom: 1px solid #d8e0e7 !important;
+  margin-bottom: 7px !important;
+}
+
+details.explain[open] .inside,
+details.explain[open] .inside p,
+details.explain[open] .inside li,
+details.explain[open] .inside div,
+details.explain[open] .inside span {
+  color: #000000 !important;
+}
+
+/* Fórmulas dentro de desplegables abiertos también blancas/negras */
+details.explain[open] .fml {
+  background: #f8fafc !important;
+  color: #000000 !important;
+  border: 1px solid #cfd8df !important;
+}
+
+/* 10) Header principal y botones superiores */
+.page-header {
+  background: linear-gradient(135deg, #12345a, #0b6b9b) !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,.38) !important;
+}
+
+.nav-btn,
+.top-btn,
+.btn,
+button {
+  background: #ffffff !important;
+  color: #0b6b9b !important;
+  border: 1px solid #b9d7ea !important;
+}
+
+/* 11) Ojos/advertencias: que no queden chillones */
+.ojo {
+  background: #fff7ed !important;
+  color: #7c2d12 !important;
+  border-color: #fed7aa !important;
+}
+
+.ojo strong {
+  color: #9a3412 !important;
+}
+</style>
 </body>
 </html>
